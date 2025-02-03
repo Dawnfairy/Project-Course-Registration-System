@@ -52,7 +52,6 @@ Uygulamada PostgreSQL veritabanı kullanılmış, Java ve Java Swing ile masaüs
   
    PostgreSQL’i kurun ve proje için gerekli veritabanı ve tabloları oluşturun.
    SQL sorguları ve tablo yapıları, proje dokümanınızda yer almalıdır.
-   Geliştirme Ortamını Ayarlayın:
 
 1. **IDE Seçimi:**
  
@@ -68,6 +67,27 @@ Uygulamada PostgreSQL veritabanı kullanılmış, Java ve Java Swing ile masaüs
   IDE üzerinden “Run” veya “Debug” seçeneğini kullanarak projeyi derleyip çalıştırın.
   Uygulama açıldığında, kullanıcı giriş ekranından sisteme erişim sağlanacaktır.
 
+
+## Not: Veritabanı Bağlantı Ayarları
+
+Aşağıdaki kod parçası, PostgreSQL veritabanına bağlantı sağlamak için kullanılmaktadır:
+
+    ```java
+    {
+        try {
+            connection1 = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + "YazLab1_1", "postgres", "12345");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+**Dikkat Edilmesi Gerekenler:**
+
+- **Veritabanı URL'si:**  
+  Yukarıdaki URL, yerel makinede çalışan PostgreSQL sunucusuna ve "YazLab1_1" adlı veritabanına bağlanmayı denemektedir. Kendi ortamınızda, sunucunuzun adresi, portu ve veritabanı adınızı kullanacak şekilde bu URL'yi güncellemeniz gerekmektedir.
+
+- **Kullanıcı Adı ve Şifre:**  
+  `"postgres"` ve `"12345"` örnek değerlerdir. Gerçek veritabanı ortamınızda tanımlı olan kullanıcı adı ve şifrenizi kullanacak şekilde değiştirilmelidir.
 
 ---
 
