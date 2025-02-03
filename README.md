@@ -45,7 +45,7 @@ Uygulamada PostgreSQL veritabanı kullanılmış, Java ve Java Swing ile masaüs
 1. **Depoyu Klonlayın:**
 
    ```bash
-   git clone https://github.com/Dawnfairy/Proje.git
+   git clone https://github.com/Dawnfairy/Project-Course-Registration-System.git
 
 
 1. **Veritabanı Kurulumu:**
